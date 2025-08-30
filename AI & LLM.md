@@ -54,9 +54,9 @@ An AI model trained on huge amounts of text data to understand and generate huma
 
 ### Example
 
-**Direct LLM Chat (No Agent):**  
+**Direct LLM(eg: ChatGPT) Chat (No Agent):**  
 You: *"What is the use of Computer?"*  
-→ LLM simply generates a text explanation and replies.  
+→ LLM(ChatGPT) simply generates a text explanation and replies.  
 
 **Using Agents (via LangChain):**  
 You: *"Find the cheapest laptop under ₹50,000 and email me a summary."*  
@@ -71,9 +71,15 @@ Agents allow an LLM to **act**, not just answer — enabling multi-step, tool-us
 ---
 
 ## Q7. What are Embeddings?  
-**Embeddings** are vector (numeric) representations of text capturing meaning.  
-Used to compare similarity, power search, and feed into RAG.  
-➡️ *Example: Finding similar FAQs based on user query.*
+- **Embeddings** are numerical vector representations of text (or other data like images, audio) that capture their **semantic meaning**.  
+  - Similar text → Similar vectors  
+  - Different text → Dissimilar vectors  
+
+- **Use Case:**  
+  - Search & Retrieval  
+  - Clustering & Classification  
+  - Recommendation systems  
+  - RAG (Retrieval-Augmented Generation)
 
 ---
 
