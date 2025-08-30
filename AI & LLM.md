@@ -7,70 +7,94 @@ An AI model trained on huge amounts of text data to understand and generate huma
 
 ---
 
-## Q2. What is LangChain?  
+## Q2. Examples of Popular LLMs
+
+### Large Language Models (LLMs)
+
+| Name        | Company      | Description |
+|------------|-------------|-------------|
+| **ChatGPT** | OpenAI | One of the most popular LLMs, based on GPT-3.5 and GPT-4. |
+| **Claude** | Anthropic | AI assistant focused on safety, helpfulness, and steerability. |
+| **LLaMA** | Meta (Facebook) | Meta’s family of open-source LLMs for research and development. |
+| **Gemini** | Google DeepMind | Google's next-gen LLM (formerly Bard), focused on reasoning and multi-modal capabilities. |
+| **DeepSeek** | DeepSeek AI | AI model focused on efficiency and research-based reasoning. |
+| **Grok** | xAI (Elon Musk) | LLM designed for X (formerly Twitter) with real-time data access. |
+
+---
+
+### Related AI Tools
+
+- **Perplexity** → Not an LLM itself, but an **AI search engine**.  
+  - Uses LLMs like GPT-4, Claude, etc.  
+  - Combines real-time web search with LLM reasoning.  
+  - Provides answers with sources, making it ideal for fact-checking and research.
+
+---
+
+## Q3. What is LangChain?  
 **LangChain** is a framework to build applications with LLMs by connecting them to external data, memory, tools, and defining workflows (chains).  
 ➡️ *Example: Building a chatbot that can search documents before replying.*
 
 ---
 
-## Q3. What is LangGraph?  
+## Q4. What is LangGraph?  
 **LangGraph** is a framework built on LangChain for creating stateful, multi-step workflows structured as a graph of nodes and edges.  
 ➡️ *Example: Creating a chatbot that follows different paths based on user input.*
 
 ---
 
-## Q4. What is RAG?  
+## Q5. What is RAG?  
 **RAG** (Retrieval-Augmented Generation) lets LLMs access external info (documents, databases) by retrieving relevant content before generating an answer.  
 ➡️ *Example: Answering a question by first searching your internal PDFs.*
 
 ---
 
-## Q5. What are Agents?  
+## Q6. What are Agents?  
 **Agents** are LLM-powered systems that decide which tools to use, perform multi-step reasoning, and take actions to solve tasks.  
 ➡️ *Example: An agent using a calculator API to answer "What’s 273 * 59?"*
 
 ---
 
-## Q6. What are Embeddings?  
+## Q7. What are Embeddings?  
 **Embeddings** are vector (numeric) representations of text capturing meaning.  
 Used to compare similarity, power search, and feed into RAG.  
 ➡️ *Example: Finding similar FAQs based on user query.*
 
 ---
 
-## Q7. Vector Store / Vector Database?  
+## Q8. Vector Store / Vector Database?  
 A **Vector Store** is a database optimized to store and search embeddings efficiently.  
 ➡️ *Example: Pinecone or FAISS used in document search systems.*
 
 ---
 
-## Q8. Prompt Engineering  
+## Q9. Prompt Engineering  
 The art of designing inputs (prompts) to LLMs to get the best outputs.  
 Includes instructions, examples, constraints, and roleplay.  
 ➡️ *Example: “You are a helpful tutor. Explain Newton’s 2nd law to a 10-year-old.”*
 
 ---
 
-## Q9. Fine-Tuning?  
+## Q10. Fine-Tuning?  
 The process of training a pre-trained LLM further on custom data to specialize it for particular tasks, domains, or styles.  
 ➡️ *Example: Fine-tuning GPT on legal documents for legal advice.*
 
 ---
 
-## Q10. Inference  
+## Q11. Inference  
 The act of running a trained model on new input to generate predictions or outputs.  
 ➡️ *Example: Feeding a paragraph to an LLM to summarize it.*
 
 ---
 
-## Q11. What is Token?  
+## Q12. What is Token?  
 A **token** is a small unit of text (word, part of word, or character) that LLMs process.  
 Models have token limits impacting cost and speed.  
 ➡️ *Example: “ChatGPT” → [‘Chat’, ‘G’, ‘PT’] → 3 tokens (approx).*
 
 ---
 
-## Q12. Ollama  
+## Q13. Ollama  
 **Ollama** is a platform for running and managing LLMs locally on your machine, providing privacy, low latency, and offline access.  
 ➡️ *Example: Running LLaMA model on your own laptop using Ollama.*
 
