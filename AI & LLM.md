@@ -44,14 +44,29 @@ An AI model trained on huge amounts of text data to understand and generate huma
 ---
 
 ## Q5. What is RAG?  
-**RAG** (Retrieval-Augmented Generation) lets LLMs access external info (documents, databases) by retrieving relevant content before generating an answer.  
+**RAG** (Retrieval-Augmented Generation) is a technique that lets LLMs access external info (documents, databases) by retrieving relevant content before generating an answer.  
 ➡️ *Example: Answering a question by first searching your internal PDFs.*
 
 ---
 
-## Q6. What are Agents?  
-**Agents** are LLM-powered systems that decide which tools to use, perform multi-step reasoning, and take actions to solve tasks.  
-➡️ *Example: An agent using a calculator API to answer "What’s 273 * 59?"*
+## Q6. What are Agents?   
+**Agents** are LLM-powered components that can **reason about a task**, **decide what actions to take**, use **external tools or APIs**, and **iterate until a goal is achieved** — instead of just generating a single response.
+
+### Example
+
+**Direct LLM Chat (No Agent):**  
+You: *"What is the use of Computer?"*  
+→ LLM simply generates a text explanation and replies.  
+
+**Using Agents (via LangChain):**  
+You: *"Find the cheapest laptop under ₹50,000 and email me a summary."*  
+1. **Research Agent** → Searches online for laptops  
+2. **Comparison Agent** → Filters and selects cheapest  
+3. **Summarization Agent** → Creates a short summary  
+4. **Email Agent** → Sends you the result  
+
+✅ **Key Point:**  
+Agents allow an LLM to **act**, not just answer — enabling multi-step, tool-using, goal-oriented workflows.
 
 ---
 
