@@ -105,21 +105,31 @@ This allows Claude to work with your **specific data and tools** while maintaini
 
 ## 7. Multi-Turn Conversations
 
-By default, Anthropic API (and Claude) **does not store conversation history**.  
-This means a follow-up question **does not have the context** of the previous question unless you provide it manually.
+When you use **Claude in the official chat interface** (Claude Web App or Claude Desktop), it automatically remembers the conversation history and maintains context between messages.
 
-Example:
+However, when you use **Claude via the Anthropic API**, the API is **stateless by default** — meaning it does not store any messages for you.  
+Each API call is treated as an independent request unless you explicitly include prior conversation history.
 
+### Example (Without History)
 **You:** What is quantum computing? Give answer in one sentence  
 **Claude:** [Answer about quantum computing]  
 **You:** Now give another sentence  
 **Claude:** [Random answer, not related to quantum computing]
 
-### How to Enable Multi-Turn Conversation
-To maintain context:
-1. **Manually maintain a list of messages** in your code
-2. **Provide the entire message list** (including previous Q&A) with every follow-up request
+This happens because Claude did not receive the first question in the second API call.
 
-This creates a continuous chat experience.
+---
+
+### How to Enable Multi-Turn Conversations (API)
+To create a chat-like experience using the API:
+1. **Maintain a message list in your code** (append each user message and Claude’s response).
+2. **Send the entire conversation history** (or at least enough recent messages) with every new API request.
+
+This way, Claude can see prior context and respond coherently, simulating a real conversation.
+
+---
+
+> **Note:**  
+> Most Claude client libraries (and official web UI) handle this for you automatically, but if you're building a custom integration, you must manage conversation state yourself.
 
 ---
