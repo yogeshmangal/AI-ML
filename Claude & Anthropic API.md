@@ -133,3 +133,39 @@ This way, Claude can see prior context and respond coherently, simulating a real
 > Most Claude client libraries (and official web UI) handle this for you automatically, but if you're building a custom integration, you must manage conversation state yourself.
 
 ---
+
+## 8. Temperature in Claude
+
+**Temperature** is a setting that controls how **creative vs. predictable** Claude's responses are.  
+Think of it as a **"creativity dial"**:
+
+- **Low temperature (0.0 – 0.3):**
+  - Responses are more **deterministic**, focused, and predictable.
+  - Good for factual Q&A, coding, and business logic where consistency matters.
+
+- **High temperature (0.7 – 1.0+):**
+  - Responses are more **creative, random, and varied**.
+  - Good for brainstorming, storytelling, and creative writing.
+
+---
+
+### When to Adjust Temperature
+- **Turn it down** → When you want concise, accurate, reproducible results.  
+- **Turn it up** → When you want variety, creativity, and more diverse ideas.
+
+---
+
+### Example API Request with Temperature
+
+```jsonc
+{
+  "model": "claude-sonnet-4-20250514",
+  "max_tokens": 1000,
+  "temperature": 0.7,
+  "messages": [
+    { "role": "user", "content": "Your message here" }
+  ]
+}
+```
+
+---
