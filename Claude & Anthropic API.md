@@ -169,3 +169,45 @@ Think of it as a **"creativity dial"**:
 ```
 
 ---
+
+## 9. Response Streaming
+
+**Response Streaming** is a feature where Claude (or any LLM) sends its response back in **small chunks as it generates the text**, rather than waiting to send the full response all at once.
+
+---
+
+### How It Works
+- **Without Streaming:**  
+  1. You send the request  
+  2. Claude processes the prompt  
+  3. You receive the **entire response at once**  
+  _(More waiting time, especially for long responses)_
+
+- **With Streaming:**  
+  1. You send the request with streaming enabled  
+  2. Claude starts sending **tokens/words as it generates them**  
+  3. You see the response appear in real-time — like watching someone type  
+
+---
+
+### Benefits
+- **Faster perceived response time** → Output starts appearing immediately  
+- **Better user experience** → No long loading spinner, text streams in live  
+- **Lower latency for long responses**  
+- **Process partial responses if needed** (useful for real-time apps)
+
+---
+
+### Example API Request (Streaming Enabled)
+
+```jsonc
+{
+  "model": "claude-sonnet-4-20250514",
+  "stream": true,
+  "messages": [
+    { "role": "user", "content": "Write a story" }
+  ]
+}
+```
+
+---
